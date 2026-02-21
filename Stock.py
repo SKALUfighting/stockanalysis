@@ -87,7 +87,9 @@ def setup_chinese_font():
 setup_chinese_font()
 
 # 配置常量
-TUSHARE_TOKEN = "dcb6a1ee13f3cb60cc84968e8cc7d4444890b5800a54d383ea3c2db3"
+# TUSHARE_TOKEN = "dcb6a1ee13f3cb60cc84968e8cc7d4444890b5800a54d383ea3c2db3"
+# 修改第90行
+TUSHARE_TOKEN = os.getenv('TUSHARE_TOKEN', "dcb6a1ee13f3cb60cc84968e8cc7d4444890b5800a54d383ea3c2db3")
 DATA_DIR = Path("quant_data")
 CACHE_DIR = DATA_DIR / "cache"
 MODEL_DIR = DATA_DIR / "models"
